@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Data - Search_Menu</title>
+  <meta charset="UTF-8">
+  <style>
+  .brd_form_like {
+    border: 4px double black; /* Параметры границы */
+    background: #d3d3d3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    width: 375px;
+    height: 150px;
+  }
+  .brd_form_not_like {
+    border: 4px double black; /* Параметры границы */
+    background: #d3d3d3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    width: 425px;
+    height: 175px;
+  }
+  </style>
+</head>
+<body>
+<div class="brd_form_like">
+  <h1>/Find News #1/</h1>
+
+  <form name="form_like">
+    <label for="textbox_word">Enter the word you want to find: </label>
+    <input id="textbox_word" type="text" placeholder="(What you like)">
+<!--  <input id='submit' type="submit" style="display:none" />-->
+<!--  <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" />-->
+  </form>
+
+  <p><button onclick="openFindWordLike();">Find</button></p>
+</div>
+<br>
+<div class="brd_form_not_like">
+  <h1>/Find News #2/</h1>
+
+  <form name="form_not_like">
+    <p><label for="textbox_word_need">Enter the word you want to find: </label>
+    <input id="textbox_word_need" type="text" placeholder="(What you like)"></p>
+    <label for="textbox_word_not">Enter the word you don't want to find: </label>
+    <input id="textbox_word_not" type="text" placeholder="(What you like)">
+  </form>
+
+  <p><button onclick="openFindWordNotLike();">Find</button></p>
+</div>
+
+<p><button onclick="window.location.href = `/news_data/`">Back</button></p>
+
+<script>
+
+const openFindWordLike = () => {if (!validate_like()) return; window.location.href = `/news_data/find_word_like/${document.getElementById('textbox_word').value}/`}
+const openFindWordNotLike = () => {if (!validate_not_like()) return; window.location.href = `/news_data/find_word_not_like/${document.getElementById('textbox_word_need').value}&${document.getElementById('textbox_word_not').value}/`}
+
+function validate_like() {
+  let a = document.forms["form_like"]["textbox_word"].value;
+  if (a == "") {
+    alert("Сomplete all required fields!");
+    return false;
+    }
+    return true;
+}
+
+function validate_not_like() {
+  let a = document.forms["form_not_like"]["textbox_word_need"].value;
+  let b = document.forms["form_not_like"]["textbox_word_not"].value;
+  if (a == "" || b == "") {
+    alert("Сomplete all required fields!");
+    return false;
+    }
+    return true;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Data - Find_ID</title>
+  <meta charset="UTF-8">
+  <style>
+  .brd_form_main {
+    border: 4px double black; /* Параметры границы */
+    background: #d3d3d3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    width: 300px;
+    height: 150px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="brd_form_main">
+
+  <h1>/Find News by ID/</h1>
+  <form name="id_form">
+    <p>Input ID: <input id="textbox_id" type="number" placeholder="(integers only)"></p>
+  </form>
+
+  <button onclick="openFind();">Find</button>
+  <button onclick="openEdit();">Edit</button>
+  <button onclick="openDelete();">Delete</button>
+</div>
+
+<p><button onclick="window.location.href = '/news_data/all/';">Show All</button> <button onclick="window.location.href = '/news_data/search_menu/';">Search Menu</button></p>
+
+<script>
+
+const openFind = () => {if (!validate()) return; window.location.href = `/news_data/${document.getElementById('textbox_id').value}/`}
+const openEdit = () => {if (!validate()) return; window.location.href = `/news_data/edit/${document.getElementById('textbox_id').value}/`}
+const openDelete = () => {if (!validate()) return; window.location.href = `/news_data/delete/${document.getElementById('textbox_id').value}/`}
+
+function validate() {
+  let a = document.forms["id_form"]["textbox_id"].value;
+  if (a == "") {
+    alert("Сomplete required field!");
+    return false;
+    }
+    return true;
+}
+
+</script>
+
+</body>
+</html>

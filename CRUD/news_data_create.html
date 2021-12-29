@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Data - Create_ID</title>
+</head>
+<body>
+
+<h1>/Add news to the database/</h1>
+<form action="/news_data/create/" method="POST">
+<!--    <p>Article: <input type="text" size="100" name="Article"></p>-->
+<!--    <p>Pre_Body: <input type="text" size="100" name="Pre_Body"></p>-->
+<!--    <p>Link: <input type="text" size="100" name="Link"></p>-->
+
+    <p>Title:</p>
+    <p><textarea rows="3" cols="100" name="Article"></textarea></p>
+    <p>Body:</p>
+    <p><textarea rows="10" cols="100" name="Pre_Body"></textarea></p>
+    <p>Link:</p>
+    <p><textarea rows="2" cols="100" name="Link"></textarea></p>
+
+    <p><input type="submit" name="save" value="Save"></p>
+</form>
+
+<p><button onclick="window.location.href = `/news_data/`">Back</button></p>
+
+</body>
+</html>

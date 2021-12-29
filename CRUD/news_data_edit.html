@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Data - Edit_ID</title>
+</head>
+<body>
+
+<p>Edit the news with ID = {{id}}</p>
+<form action="/news_data/edit/{{id}}/" method="POST">
+    <p><textarea rows="3" cols="100" name="Article">{{old[0]}}</textarea></p>
+    <p><textarea rows="10" cols="100" name="Pre_Body">{{old[1]}}</textarea></p>
+    <p><textarea rows="2" cols="100" name="Link">{{old[2]}}</textarea></p>
+    <p><input type="submit" name="save" value="Save"></p>
+</form>
+
+<p><button onclick="window.location.href = `/news_data/`">Back</button></p>
+
+</body>
+</html>
