@@ -9,8 +9,15 @@
 
 3. ___Сайт:___
 Написан на html и немного JavaScript. Сделан веб-интерфейс для взаимодействия с ___CRUD-функциями___.
-<img width="320" alt="222" src="https://user-images.githubusercontent.com/95654540/147759332-9f4bf0fe-9205-4118-9c09-305a41bf8b7f.png">
 
+Скриншот ___"Главное меню"___:
+<img width="366" alt="Главное" src="https://user-images.githubusercontent.com/95654540/147759796-4bdf8e73-0b4c-4476-9c22-e0ce4de65ad2.png">
+
+Скриншот ___"Поиск в Базе данных"___:
+<img width="490" alt="Поиск" src="https://user-images.githubusercontent.com/95654540/147759844-38a2b40c-6d0b-46ff-b5c9-faa022b6e16d.png">
+
+Сриншот ___"Функция Show All"___:
+<img width="892" alt="БД" src="https://user-images.githubusercontent.com/95654540/147759912-a3c19b02-79ff-4b32-8bcd-1e7277ffa630.png">
 
 
 ## Для запуска нам нужно:
